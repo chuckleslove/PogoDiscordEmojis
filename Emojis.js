@@ -6,7 +6,7 @@ const Emojis = require('./Emojis.js');
 const emojis = new Emojis.DiscordEmojis();
 
 bot.on('ready', () => {
-    emojis.LoadEmojis(bot);
+    emojis.Load(bot);
 })
 ///////////////////////////////////////////////////////////////*/
 
