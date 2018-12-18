@@ -1,4 +1,4 @@
-// https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
+oh// https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
 // https://discord.gg/AnECN8U - Legendary boss emojis
 
 /*/////////////// HOW TO USE /////////////////////////////////////
@@ -6,7 +6,7 @@ const Emojis = require('./Emojis.js');
 const emojis = new Emojis.DiscordEmojis();
 
 bot.on('ready', () => {
-    emojis.load(bot);
+    emojis.LoadEmojis(bot);
 })
 ///////////////////////////////////////////////////////////////*/
 
@@ -183,6 +183,11 @@ function LoadEmojis(bot)
             {
                 this.yellowegg = guild.emojis.find(emoji => emoji.name === "yellowegg");
                 if(this.yellowegg) { this.yelloweggReact = this.yellowegg; this.yellowegg = this.yellowegg.toString() }
+            }
+            if(!this.exPass)
+            {
+                this.exPass = guild.emojis.find(emoji => emoji.name === "ex_pass");
+                if(this.exPass) { this.exPassreact = this.exPass; this.exPass = this.exPass.toString() }
             }
             if(!this.europe2017)
             {
