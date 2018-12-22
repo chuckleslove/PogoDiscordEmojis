@@ -1,4 +1,4 @@
-oh// https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
+// https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
 // https://discord.gg/AnECN8U - Legendary boss emojis
 
 /*/////////////// HOW TO USE /////////////////////////////////////
@@ -19,11 +19,19 @@ class DiscordEmojis
 	}	
 }
 
-function LoadEmojis(bot)
+function LoadEmojis(bot, serverIDs)
 {    
     let guildArray = bot.guilds;
 
     guildArray = Array.from(guildArray);
+
+    if(serverIDs) 
+    { 
+        for(var i = 0; i < serverIDs.length; i++)
+        {
+            guildArray.unshift([serverIDs[i]]); 
+        }
+    }
 
     for(var i = 0; i < guildArray.length; i++)
     {
@@ -33,106 +41,106 @@ function LoadEmojis(bot)
             if(!this.bug)
             {
                 this.bug = guild.emojis.find(emoji => emoji.name === "bugtype");
-                if(this.bug) { this.bugReact = this.bug; this.bug = this.bug.toString() }
+                if(this.bug) { this.bugReact = this.bug; this.bug = this.bug.toString(); this.Bug = this.bug; }
             }
             
             if(!this.dark)
             {
                 this.dark = guild.emojis.find(emoji => emoji.name === "dark");
-                if(this.dark) { this.darkReact = this.dark; this.dark = this.dark.toString() }
+                if(this.dark) { this.darkReact = this.dark; this.dark = this.dark.toString(); this.Dark = this.dark; }
             }
 
             if(!this.dragon)
             {
                 this.dragon = guild.emojis.find(emoji => emoji.name === "dragontype");
-                if(this.dragon) { this.dragonReact = this.dragon; this.dragon = this.dragon.toString() }
+                if(this.dragon) { this.dragonReact = this.dragon; this.dragon = this.dragon.toString(); this.Dragon = this.dragon; }
             }
 
             if(!this.electric)
             {
                 this.electric = guild.emojis.find(emoji => emoji.name === "electric");
-                if(this.electric) { this.electricReact = this.electric; this.electric = this.electric.toString() }
+                if(this.electric) { this.electricReact = this.electric; this.electric = this.electric.toString(); this.Electric = this.electric; }
             }
             if(!this.ground)
             {
                 this.ground = guild.emojis.find(emoji => emoji.name === "ground");
-                if(this.ground) { this.groundReact = this.ground; this.ground = this.ground.toString() }
+                if(this.ground) { this.groundReact = this.ground; this.ground = this.ground.toString(); this.Ground = this.ground; }
             }
             if(!this.fire)
             {
                 this.fire = guild.emojis.find(emoji => emoji.name === "firetype");
-                if(this.fire) { this.fireReact = this.fire; this.fire = this.fire.toString() }
+                if(this.fire) { this.fireReact = this.fire; this.fire = this.fire.toString(); this.Fire = this.fire; }
             }
             if(!this.water)
             {
                 this.water = guild.emojis.find(emoji => emoji.name === "water");
-                if(this.water) { this.waterReact = this.water; this.water = this.water.toString() }
+                if(this.water) { this.waterReact = this.water; this.water = this.water.toString(); this.Water = this.water; }
             }
             
             if(!this.rock)
             {
                 this.rock = guild.emojis.find(emoji => emoji.name === "rock");
-                if(this.rock) { this.rockReact = this.rock; this.rock = this.rock.toString() }
+                if(this.rock) { this.rockReact = this.rock; this.rock = this.rock.toString(); this.Rock = this.rock; }
             }
             
             if(!this.fairy)
             {
                 this.fairy = guild.emojis.find(emoji => emoji.name === "fairy");
-                if(this.fairy) { this.fairyReact = this.fairy; this.fairy = this.fairy.toString() }
+                if(this.fairy) { this.fairyReact = this.fairy; this.fairy = this.fairy.toString(); this.Fairy = this.fairy; }
             }
             
             if(!this.flying)
             {
                 this.flying = guild.emojis.find(emoji => emoji.name === "flying");
-                if(this.flying) { this.flyingReact = this.flying; this.flying = this.flying.toString() }
+                if(this.flying) { this.flyingReact = this.flying; this.flying = this.flying.toString(); this.Flying = this.flying; }
             }
 
             if(!this.fighting)
             {
                 this.fighting = guild.emojis.find(emoji => emoji.name === "fighting");
-                if(this.fighting) { this.fightingReact = this.fighting; this.fighting = this.fighting.toString() }
+                if(this.fighting) { this.fightingReact = this.fighting; this.fighting = this.fighting.toString(); this.Fighting = this.fighting; }
             }
 
             if(!this.normal)
             {
                 this.normal = guild.emojis.find(emoji => emoji.name === "normal");
-                if(this.normal) { this.normalReact = this.normal; this.normal = this.normal.toString() }
+                if(this.normal) { this.normalReact = this.normal; this.normal = this.normal.toString(); this.Normal = this.normal; }
             }
 
             if(!this.ice)
             {
                 this.ice = guild.emojis.find(emoji => emoji.name === "ice");
-                if(this.ice) { this.iceReact = this.ice; this.ice = this.ice.toString() }
+                if(this.ice) { this.iceReact = this.ice; this.ice = this.ice.toString(); this.Ice = this.ice; }
             }
 
             if(!this.grass)
             {
                 this.grass = guild.emojis.find(emoji => emoji.name === "grass");
-                if(this.grass) { this.grassReact = this.grass; this.grass = this.grass.toString() }
+                if(this.grass) { this.grassReact = this.grass; this.grass = this.grass.toString(); this.Grass = this.grass; }
             }
 
             if(!this.steel)
             {
                 this.steel = guild.emojis.find(emoji => emoji.name === "steel");
-                if(this.steel) { this.steelReact = this.steel; this.steel = this.steel.toString() }
+                if(this.steel) { this.steelReact = this.steel; this.steel = this.steel.toString(); this.Steel = this.steel; }
             }
 
             if(!this.poison)
             {
                 this.poison = guild.emojis.find(emoji => emoji.name === "poison");
-                if(this.poison) { this.poisonReact = this.poison; this.poison = this.poison.toString() }
+                if(this.poison) { this.poisonReact = this.poison; this.poison = this.poison.toString(); this.Poison = this.poison; }
             }
 
             if(!this.ghost)
             {
                 this.ghost = guild.emojis.find(emoji => emoji.name === "ghosttype");
-                if(this.ghost) { this.ghostReact = this.ghost; this.ghost = this.ghost.toString() }
+                if(this.ghost) { this.ghostReact = this.ghost; this.ghost = this.ghost.toString(); this.Ghost = this.ghost; }
             }
 
             if(!this.psychic)
             {
                 this.psychic = guild.emojis.find(emoji => emoji.name === "psychic");
-                if(this.psychic) { this.psychicReact = this.psychic; this.psychic = this.psychic.toString() }
+                if(this.psychic) { this.psychicReact = this.psychic; this.psychic = this.psychic.toString(); this.Psychic = this.psychic; }
             }
             if(!this.gold)
             {
@@ -152,27 +160,57 @@ function LoadEmojis(bot)
             if(!this.valor)
             {
                 this.valor = guild.emojis.find(emoji => emoji.name === "valor");
-                if(this.valor) { this.valorReact = this.valor; this.valor = this.valor.toString();  }
+                if(this.valor) { this.valorReact = this.valor; this.valor = this.valor.toString()  }
+            }
+            if(!this.valor2)
+            {
+                this.valor2 = guild.emojis.find(emoji => emoji.name === "valor2");
+                if(this.valor2) { this.valor2React = this.valor2; this.valor2 = this.valor2.toString()  }
             }
             if(!this.instinct)
             {
                 this.instinct = guild.emojis.find(emoji => emoji.name === "instinct");
                 if(this.instinct) { this.instinctReact = this.instinct; this.instinct = this.instinct.toString() }
             }
+            if(!this.instinct2)
+            {
+                this.instinct2 = guild.emojis.find(emoji => emoji.name === "instinct2");
+                if(this.instinct2) { this.instinct2React = this.instinct2; this.instinct2 = this.instinct2.toString() }
+            }
             if(!this.mystic)
             {
                 this.mystic = guild.emojis.find(emoji => emoji.name === "mystic");
                 if(this.mystic) { this.mysticReact = this.mystic; this.mystic = this.mystic.toString() }
             }
+            if(!this.mystic2)
+            {
+                this.mystic2 = guild.emojis.find(emoji => emoji.name === "mystic2");
+                if(this.mystic2) { this.mystic2React = this.mystic2; this.mystic2 = this.mystic2.toString() }
+            }
             if(!this.uncontested)
             {
                 this.uncontested = guild.emojis.find(emoji => emoji.name === "uncontested");
-                if(this.uncontested) { this.uncontestedReact = this.uncontested; this.uncontested = this.uncontested.toString() }
+                if(this.uncontested) { this.uncontestedReact = this.uncontested; this.uncontested = this.uncontested.toString(); }
+            }
+            if(!this.greatLeague)
+            {
+                this.greatLeague = guild.emojis.find(emoji => emoji.name ==="great");
+                if(this.greatLeague) { this.greatLeagueReact = this.greatLeague; this.greatLeague = this.greatLeague.toString(); }
+            }
+            if(!this.ultraLeague)
+            {
+                this.ultraLeague = guild.emojis.find(emoji => emoji.name ==="ultra");
+                if(this.ultraLeague) { this.ultraLeagueReact = this.ultraLeague; this.ultraLeague = this.ultraLeague.toString(); }
+            }
+            if(!this.masterLeague)
+            {
+                this.masterLeague = guild.emojis.find(emoji => emoji.name ==="master");
+                if(this.masterLeague) { this.masterLeagueReact = this.masterLeague; this.masterLeague = this.masterLeague.toString(); }
             }
             if(!this.silveregg)
             {
                 this.silveregg = guild.emojis.find(emoji => emoji.name === "silveregg");
-                if(this.silveregg) { this.silvereggReact = this.silveregg; this.silveregg = this.silveregg.toString() }
+                if(this.silveregg) { this.silvereggReact = this.silveregg; this.silveregg = this.silveregg.toString(); }
             }
             if(!this.pinkegg)
             {
@@ -391,6 +429,11 @@ function LoadEmojis(bot)
             {
                 this.clear = guild.emojis.find(emoji => emoji.name === "clear")
                 if(this.clear) { this.clearReact = this.clear; this.clear = this.clear.toString() }
+            }
+            if(!this.checkYes)
+            {
+                this.checkYes = guild.emojis.find(emoji => emoji.name === "check_yes")
+                if(this.checkYes) { this.checkYesReact = this.checkYes; this.checkYes = this.checkYes.toString() }
             }
         }
     }   
