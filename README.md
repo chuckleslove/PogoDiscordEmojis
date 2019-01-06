@@ -6,7 +6,7 @@ Join and add your bot to two different servers for full access to all emojis:
 
 https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
 
-https://discord.gg/AnECN8U - Legendary boss emojis
+https://discord.gg/cw8BzYn - Legendary boss emojis
 
 # Use
 
