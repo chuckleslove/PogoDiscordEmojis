@@ -1,5 +1,5 @@
 // https://discord.gg/zqVCfPy - WEATHER, TEAMS, GYMS, TYPES
-// https://discord.gg/AnECN8U - Legendary boss emojis
+// https://discord.gg/cw8BzYn - Legendary boss emojis
 
 /*/////////////// HOW TO USE /////////////////////////////////////
 const Emojis = require('./Emojis.js');
